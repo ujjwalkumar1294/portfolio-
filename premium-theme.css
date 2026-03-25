@@ -1,0 +1,528 @@
+/* ═══════════════════════════════════════════════
+   PREMIUM THEME — Purple Nebula
+   Overlays on top of portfolio.css
+   ═══════════════════════════════════════════════ */
+
+/* ─── DESIGN TOKENS ─────────────────────────── */
+:root {
+  --nebula-bg:     #0F0C29;
+  --nebula-mid:    #302B63;
+  --nebula-light:  #24243E;
+  --accent:        #A855F7;
+  --accent-glow:   rgba(168, 85, 247, 0.45);
+  --accent-dim:    rgba(168, 85, 247, 0.15);
+  --cyan:          #22D3EE;
+  --cyan-glow:     rgba(34, 211, 238, 0.3);
+  --pink:          #EC4899;
+  --card-bg:       rgba(30, 27, 60, 0.6);
+  --card-border:   rgba(168, 85, 247, 0.12);
+  --glass-blur:    16px;
+  --radius-md:     14px;
+  --radius-lg:     20px;
+  --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ─── SCROLL PROGRESS BAR ───────────────────── */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--cyan), var(--pink));
+  transform-origin: left center;
+  transform: scaleX(0);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+
+/* ─── TYPING EFFECT ─────────────────────────── */
+.typing-role {
+  color: var(--accent);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typing-cursor {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: blink-cursor 0.75s ease infinite;
+  -webkit-text-fill-color: var(--accent);
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* ─── SKILL PROGRESS BARS ───────────────────── */
+.skill-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.skill-item {
+  position: relative;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--cyan));
+  box-shadow: 0 0 10px var(--accent-glow), 0 0 20px rgba(34, 211, 238, 0.2);
+  transition: none; /* GSAP handles width */
+}
+
+
+/* ─── AMBIENT BACKGROUND ORBS ───────────────── */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.orb-purple {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  top: 10%;
+  right: -5%;
+  animation-name: float-orb-1;
+}
+
+.orb-cyan {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, var(--cyan) 0%, transparent 70%);
+  bottom: 5%;
+  left: -8%;
+  animation-name: float-orb-2;
+  animation-delay: -10s;
+}
+
+@keyframes float-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(1.1); }
+  66% { transform: translate(30px, -20px) scale(0.95); }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(35px, -25px) scale(1.05); }
+  66% { transform: translate(-25px, 35px) scale(0.9); }
+}
+
+
+/* ─── PROJECT CARD GLOW TRACKING ────────────── */
+.proj-card {
+  --glow-x: 50%;
+  --glow-y: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--glow-x) var(--glow-y),
+    var(--accent-dim),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.proj-card:hover::before {
+  opacity: 1;
+}
+
+/* Shimmer sweep on hover */
+.proj-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.06),
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  transform: skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.proj-card:hover::after {
+  animation: shimmer-sweep 0.8s ease forwards;
+}
+
+@keyframes shimmer-sweep {
+  0% { left: -100%; }
+  100% { left: 130%; }
+}
+
+
+/* ─── ENHANCED CARD STYLES ──────────────────── */
+.proj-card {
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.proj-card:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow:
+    0 8px 40px rgba(168, 85, 247, 0.12),
+    0 0 60px rgba(168, 85, 247, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Project number glow */
+.proj-n {
+  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px var(--accent-glow));
+}
+
+/* Enhanced project badges */
+.proj-badge {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(34, 211, 238, 0.15));
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.1);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.proj-card:hover .proj-badge {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+  transform: translateY(-1px);
+}
+
+
+/* ─── SKILL ITEMS ENHANCED ──────────────────── */
+.skill-item {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition),
+              background var(--transition);
+}
+
+.skill-item:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 4px 20px rgba(168, 85, 247, 0.15),
+    0 0 30px rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.35);
+  background: rgba(168, 85, 247, 0.08);
+}
+
+
+/* ─── SKILL CATEGORY CARDS ──────────────────── */
+.skill-category {
+  border: 1px solid var(--card-border);
+  transition: border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+.skill-category:hover {
+  border-color: rgba(168, 85, 247, 0.25);
+  box-shadow: 0 4px 30px rgba(168, 85, 247, 0.08);
+}
+
+
+/* ─── CERTIFICATION CARDS ───────────────────── */
+.cert-card-v2 {
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition),
+              border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+.cert-card-v2:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow:
+    0 12px 40px rgba(168, 85, 247, 0.1),
+    0 0 50px rgba(168, 85, 247, 0.04);
+}
+
+
+/* ─── ACHIEVEMENT CARDS ─────────────────────── */
+.ach-card {
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.ach-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow:
+    0 10px 35px rgba(168, 85, 247, 0.12),
+    0 0 40px rgba(168, 85, 247, 0.05);
+}
+
+.ach-glyph {
+  filter: drop-shadow(0 0 16px var(--accent-glow));
+  transition: filter var(--transition), transform var(--transition);
+}
+
+.ach-card:hover .ach-glyph {
+  filter: drop-shadow(0 0 24px rgba(168, 85, 247, 0.6));
+  transform: scale(1.15);
+}
+
+
+/* ─── ABOUT STAT CARDS ──────────────────────── */
+.scard {
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition),
+              border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+.scard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 28px rgba(168, 85, 247, 0.1);
+}
+
+.scard .num {
+  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* ─── TRAINING CARD TIMELINE ────────────────── */
+.training-card {
+  border-left: 3px solid var(--accent);
+  position: relative;
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  transition: border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+.training-card::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow), 0 0 24px rgba(168, 85, 247, 0.2);
+  z-index: 2;
+}
+
+.training-card:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  border-left-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.1);
+}
+
+
+/* ─── CTA BUTTON PULSE GLOW ─────────────────── */
+.btn-grad {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-grad::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(var(--accent), var(--cyan), var(--accent));
+  opacity: 0;
+  filter: blur(12px);
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.btn-grad:hover::after {
+  opacity: 0.5;
+  animation: pulse-glow 2s ease infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.05); }
+}
+
+
+/* ─── NAV ENHANCEMENT ───────────────────────── */
+nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+nav.scrolled {
+  border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ─── CONTACT LINKS ─────────────────────────── */
+.cl {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.cl:hover {
+  transform: translateY(-3px);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 6px 24px rgba(168, 85, 247, 0.12);
+}
+
+.cl:hover svg {
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+  transition: filter 0.3s ease;
+}
+
+
+/* ─── FOOTER LINKS ──────────────────────────── */
+.footer-link {
+  transition: color var(--transition),
+              transform var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.footer-link:hover svg {
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+
+/* ─── HERO GLOW ENHANCEMENTS ────────────────── */
+.hero-glow-1 {
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  animation: hero-glow-drift 12s ease-in-out infinite alternate;
+}
+
+.hero-glow-2 {
+  background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
+  animation: hero-glow-drift 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes hero-glow-drift {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  50% { transform: translate(30px, -20px); opacity: 0.6; }
+  100% { transform: translate(-20px, 15px); opacity: 0.35; }
+}
+
+
+/* ─── GRADIENT LINE ENHANCEMENT ─────────────── */
+.grad-line {
+  background: linear-gradient(90deg, var(--accent), var(--cyan), transparent);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+
+/* ─── SECTION DIVIDERS ──────────────────────── */
+section + section::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.15), transparent);
+  margin-bottom: 0;
+}
+
+
+/* ─── TAG ENHANCEMENT ───────────────────────── */
+.tag {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              background var(--transition);
+}
+
+.tag:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.15);
+  background: rgba(168, 85, 247, 0.12);
+}
+
+
+/* ─── CHIP ENHANCEMENT ──────────────────────── */
+.chip {
+  transition: transform var(--transition),
+              background var(--transition),
+              box-shadow var(--transition);
+}
+
+.chip:hover {
+  transform: scale(1.08);
+  background: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 2px 12px rgba(168, 85, 247, 0.12);
+}
+
+
+/* ─── RESPONSIVE — DISABLE HEAVY FX ─────────── */
+@media (max-width: 768px) {
+  .ambient-orb {
+    display: none;
+  }
+
+  .proj-card::before,
+  .proj-card::after {
+    display: none;
+  }
+
+  .scroll-progress-bar {
+    height: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb,
+  .scroll-progress-bar,
+  .typing-cursor {
+    animation: none;
+  }
+
+  .proj-card::after {
+    display: none;
+  }
+}

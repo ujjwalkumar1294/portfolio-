@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ujjwal Kumar — Data Analyst & Developer</title>
+  <meta name="description"
+    content="Portfolio of Ujjwal Kumar — Data Analyst & Software Developer turning raw datasets into powerful insights and building solutions that scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="popper-widgets.css">
+  <link rel="stylesheet" href="starwars-theme.css">
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-logo">UK.</div>
+    <div class="preloader-bar">
+      <div class="preloader-fill"></div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <img id="lightbox-img" src="" alt="Certificate Preview">
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#training">Training</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">UK.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="nav-dropdown-trigger" id="nav-more-trigger">
+          More
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Popper.js Nav Dropdown Menu -->
+    <div class="nav-dropdown-menu" id="nav-more-menu">
+      <a href="#achievements">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        Achievements
+      </a>
+      <div class="nav-dropdown-divider"></div>
+      <a href="https://github.com/ujjwalkumar1294" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub Profile
+      </a>
+      <a href="https://linkedin.com/in/ujjwal-kumar-28" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <div class="nav-dropdown-divider"></div>
+      <a href="mailto:ujjwalkumar1294@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Send Email
+      </a>
+    </div>
+
+    <a href="mailto:ujjwalkumar1294@gmail.com" class="nav-cta">Hire Me ↗</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="grid-bg"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span> Open to Opportunities
+          </div>
+          <h1 class="hero-title">
+            <span class="line"><span class="word">Ujjwal</span></span>
+            <span class="line"><span class="word grad-text">Kumar</span></span>
+          </h1>
+          <p class="hero-p">Data Analyst &amp; Software Developer</p>
+          <div class="hero-btns">
+            <div class="btn-magnetic"><a href="#projects" class="btn-holo">View Missions</a></div>
+            <div class="btn-magnetic"><a href="#contact" class="btn-holo btn-sith">Comm Link</a></div>
+            <div class="btn-magnetic"><a href="Ujjwal_CV.docx" download="Ujjwal_CV.docx" class="btn-holo" style="display: flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download CV
+            </a></div>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">Django</span>
+            <span class="tag">React.js</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="hero-right" style="position: relative; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 400px;">
+          <div class="hud-container">
+            <div class="hud-ring hud-ring-1"></div>
+            <div class="hud-ring hud-ring-2"></div>
+            <div class="hud-ring hud-ring-3"></div>
+            <div class="hud-center" style="width: 65%; height: 65%; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <img src="profile_pic.jpg" alt="Ujjwal Kumar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+          </div>
+          <div class="float-card fc1 holo-panel">📊 18K+ Records</div>
+          <div class="float-card fc2 holo-panel">🐍 Python · DSA</div>
+          <div class="float-card fc3 holo-panel">📈 Power BI</div>
+          <div class="float-card fc4 holo-panel">🎓 LPU · CSE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span class="marquee-item"><span class="dot"></span>Data Analytics</span>
+      <span class="marquee-item"><span class="dot"></span>Power BI Dashboards</span>
+      <span class="marquee-item"><span class="dot"></span>Python Programming</span>
+      <span class="marquee-item"><span class="dot"></span>SQL &amp; Databases</span>
+      <span class="marquee-item"><span class="dot"></span>C++ &amp; DSA</span>
+      <span class="marquee-item"><span class="dot"></span>Django &amp; FastAPI</span>
+      <span class="marquee-item"><span class="dot"></span>React.js</span>
+      <span class="marquee-item"><span class="dot"></span>Software Development</span>
+      <span class="marquee-item"><span class="dot"></span>Data Analytics</span>
+      <span class="marquee-item"><span class="dot"></span>Power BI Dashboards</span>
+      <span class="marquee-item"><span class="dot"></span>Python Programming</span>
+      <span class="marquee-item"><span class="dot"></span>SQL &amp; Databases</span>
+      <span class="marquee-item"><span class="dot"></span>C++ &amp; DSA</span>
+      <span class="marquee-item"><span class="dot"></span>Django &amp; FastAPI</span>
+      <span class="marquee-item"><span class="dot"></span>React.js</span>
+      <span class="marquee-item"><span class="dot"></span>Software Development</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="jedi-starfield-bg">
+    <div class="container relative-z">
+      <div class="about-grid">
+        <div>
+          <div class="s-label sith-text">About Me</div>
+          <h2 class="s-title">Building with data,<br><span class="holo-text">thinking in systems</span></h2>
+          <div class="jedi-energy-line"></div>
+          <p class="jedi-text-glow">Computer Science student at Lovely Professional University with
+            a deep interest in data analytics and problem-solving. I enjoy working with datasets, uncovering hidden
+            patterns, and translating them into decisions. With a foundation in programming and data structures, I
+            continuously push my technical skills through real projects.</p>
+          <div class="about-stats">
+            <div class="jedi-stat-card">
+              <div class="num" data-target="18000">0</div>
+              <div class="lab">Records Analyzed</div>
+            </div>
+            <div class="jedi-stat-card">
+              <div class="num" data-target="4">0</div>
+              <div class="lab">Projects Shipped</div>
+            </div>
+            <div class="jedi-stat-card">
+              <div class="num" data-target="4">0</div>
+              <div class="lab">Certifications</div>
+            </div>
+            <div class="jedi-stat-card">
+              <div class="num-text">6.65 CGPA</div>
+              <div class="lab">CSE @ LPU</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="jedi-profile-wrapper">
+            <div class="jedi-minimal-ring"></div>
+            <div class="jedi-profile-card">
+              <div>
+                <div class="av-big">UK</div>
+                <div class="about-name">Ujjwal Kumar</div>
+                <div class="about-role">Data Analyst · Software Developer · CSE Student</div>
+              </div>
+              <div class="chip-row">
+                <span class="jedi-chip">Power BI</span>
+                <span class="jedi-chip">Python</span>
+                <span class="jedi-chip">Excel</span>
+                <span class="jedi-chip">C++</span>
+                <span class="jedi-chip">MySQL</span>
+                <span class="jedi-chip">Django</span>
+                <span class="jedi-chip">React.js</span>
+                <span class="jedi-chip">FastAPI</span>
+                <span class="jedi-chip">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH ARSENAL (SKILLS) -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <div class="holo-label">Capabilities</div>
+        <h2 class="holo-heading">Tech Arsenal</h2>
+        <div class="grad-line"></div>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- Languages -->
+        <div class="skill-category cat-lang">
+          <div class="cat-header">
+            <div class="cat-icon">⚡</div>
+            <div>
+              <div class="cat-title">Languages</div>
+              <div class="cat-subtitle">Core programming foundations</div>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="75">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M11.5 0C5.148 0 0 5.148 0 11.5S5.148 23 11.5 23 23 17.852 23 11.5 17.852 0 11.5 0zm.5 4.5a.5.5 0 110 1 .5.5 0 010-1zm-1 3h2v9h-2V7.5z" />
+              </svg>
+              C
+            </div>
+            <div class="skill-item" data-level="88">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.109-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z" />
+              </svg>
+              C++
+            </div>
+            <div class="skill-item" data-level="92">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01.21.03zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />
+              </svg>
+              Python
+            </div>
+            <div class="skill-item" data-level="70">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.544 1.644-2.469 6.197-3.665 5.19-7.622M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639" />
+              </svg>
+              Java
+            </div>
+            <div class="skill-item" data-level="72">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 5h1v4.5l3.5 2-0.5 0.9L12 10V5z" />
+              </svg>
+              DBMS
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Web Technologies -->
+        <div class="skill-category cat-fw">
+          <div class="cat-header">
+            <div class="cat-icon">🌐</div>
+            <div>
+              <div class="cat-title">Frameworks &amp; Web Technologies</div>
+              <div class="cat-subtitle">Full-stack development tools</div>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="85">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M11.146 0h3.924l-8.402 24H2.742zm8.404 0h3.924l-8.402 24h-3.924zm-16.55 3.279h3.924l-8.402 20.721H-.999z" />
+              </svg>
+              Django
+            </div>
+            <div class="skill-item" data-level="90">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.413z" />
+              </svg>
+              HTML
+            </div>
+            <div class="skill-item" data-level="88">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm5.343 9.872l.196 2.527 5.018.001-.255 2.555-2.929.773-2.935-.773-.21-2.31H3.875l.368 4.27 4.68 1.31 4.674-1.31.636-7.21H6.843zm-.136-4.098l.256 2.554h7.985l-.256 2.554 1.279-.002.336-2.552h.001l.12-2.554H6.707z" />
+              </svg>
+              CSS
+            </div>
+            <div class="skill-item" data-level="78">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+              </svg>
+              JavaScript
+            </div>
+            <div class="skill-item" data-level="55">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14.23 12.004a2.236 2.236 0 01-2.235 2.236 2.236 2.236 0 01-2.236-2.236 2.236 2.236 0 012.235-2.236 2.236 2.236 0 012.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.47 0-.92.015-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.387zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.375-.498-1.732-.74-2.852-1.708-2.852-2.476.005-.768 1.125-1.74 2.857-2.475.42-.18.88-.342 1.356-.495zm11.108 7.14c.65.115 1.285.237 1.99.388-.186.643-.41 1.296-.676 1.952-.2-.39-.41-.782-.64-1.174-.232-.394-.47-.778-.674-1.166zm-9.83.01c-.2.387-.438.77-.67 1.163-.23.39-.44.78-.64 1.168-.264-.655-.49-1.31-.676-1.94.7-.148 1.37-.277 2.086-.391zm4.92.978c.438.57.88 1.092 1.314 1.554-.44.02-.89.033-1.342.033-.47 0-.918-.02-1.35-.038.426-.463.863-.984 1.378-1.549z" />
+              </svg>
+              React.js
+            </div>
+            <div class="skill-item" data-level="68">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M15.954 0l-3.81 6.596-3.806-6.596H0l12.144 21.016L24 0H15.954zM3.535 1.608h3.88l4.726 8.185-1.934 3.348L3.535 1.608zm16.908 0h-3.833l-7.95 13.765 1.942 3.366L20.443 1.608z" />
+              </svg>
+              FastAPI
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Tools -->
+        <div class="skill-category cat-data">
+          <div class="cat-header">
+            <div class="cat-icon">📊</div>
+            <div>
+              <div class="cat-title">Data &amp; Tools</div>
+              <div class="cat-subtitle">Analytics, databases &amp; DevOps</div>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="85">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.274.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.1l1.325.772.357-.62zM15.5 17.588c-.267.32-.69.48-1.267.48-.576 0-.99-.164-1.243-.493-.25-.33-.374-.866-.374-1.612 0-.745.13-1.296.388-1.652.258-.355.670-.533 1.232-.533.566 0 .977.18 1.232.54.257.36.386.9.386 1.612 0 .748-.12 1.284-.354 1.658z" />
+              </svg>
+              MySQL
+            </div>
+            <div class="skill-item" data-level="90">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V6q0-.41.3-.7Q.58 5 1 5h5.3V2.5q0-.41.3-.7.29-.3.7-.3zM6.38 13.78l1.2-4.72H5.9l-1.44 4.72zm6.5-6.29v-.63h-2.34v.63h.73V13h-.73v.63h2.34V13h-.73V7.49zM5.1 6.32l.5 1.64h-.5v-.67H4.2v.67h-.5L4.2 6.32zm12.07 0h-.97l-.76 2.35V13h.73v-2.77h1.17V13h.73V8.67zm-3.18 0h-.73v6.31h1.7l.21-.63h-.97l-.21-.63h.97zm3.95 0h.73V13h-.73zM8.5 18.5v1h14.5v-1zm0-2.5v1h14.5v-1zm0-2.5v1h14.5v-1zm0-2.5v1h14.5v-1zm0-2.5v1h14.5v-1zm0-2.5v1h14.5v-1z" />
+              </svg>
+              Excel
+            </div>
+            <div class="skill-item" data-level="88">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.3 2.5c-1.8 0-3.4.7-4.6 1.9L2 10.4c-2.6 2.6-2.6 6.8 0 9.4 1.3 1.3 3 1.9 4.7 1.9s3.4-.6 4.7-1.9l.9-.9c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-.9.9C9.2 19.2 7.9 19.8 6.7 19.8c-1.2 0-2.5-.5-3.4-1.4-1.9-1.9-1.9-4.9 0-6.8l6.7-6.7c.9-.9 2.1-1.4 3.4-1.4 1.2 0 2.5.5 3.4 1.4.9.9 1.4 2.1 1.4 3.4 0 1.2-.5 2.4-1.4 3.3l-1.3 1.3c-.4.4-.4 1 0 1.4.2.2.5.3.7.3.3 0 .5-.1.7-.3l1.3-1.3c1.3-1.3 2-3 2-4.7 0-1.8-.7-3.5-2-4.7C15 3.2 14.2 2.5 13.3 2.5z" />
+              </svg>
+              Power BI
+            </div>
+            <div class="skill-item" data-level="75">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </div>
+            <div class="skill-item" data-level="70">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099zm2.471 7.485a.855.855 0 0 1 .593-.593 2.225 2.225 0 0 1 .58-.08c.32 0 .58.109.78.328.2.22.3.488.3.808a1.47 1.47 0 0 1-.3.905 1.015 1.015 0 0 1-.84.39 1.008 1.008 0 0 1-.84-.39 1.447 1.447 0 0 1-.303-.905c0-.193.01-.347.03-.463zm-8.099 11.178a.56.56 0 0 1-.49-.847l1.552-2.617a.56.56 0 0 1 .82-.159l.58.435a.56.56 0 0 1 .146.738l-1.634 2.45h-.974z" />
+              </svg>
+              Postman
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING & PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div>
+        <div class="s-label">Portfolio</div>
+        <h2 class="s-title">Training &amp; Projects</h2>
+        <div class="grad-line"></div>
+      </div>
+      <div class="proj-grid">
+
+        <!-- Project 1 -->
+        <div class="proj-card holo-panel scan-line-container">
+          <div class="scan-line"></div>
+          <div class="proj-n">01</div>
+          <span class="proj-badge">Excel · Analytics</span>
+          <div class="proj-title">LA Crime Insights Dashboard</div>
+          <p class="proj-desc">Analyzed 18,000+ crime records to identify high-risk zones and peak crime periods using
+            an interactive Excel dashboard with dynamic filters and visualizations.</p>
+          <ul class="proj-feats">
+            <li>Data cleaning &amp; preprocessing of 18K+ records</li>
+            <li>Interactive slicers &amp; filters for drill-down</li>
+            <li>Trend analysis &amp; heatmap visualization</li>
+          </ul>
+          <div class="proj-stack"><span class="holo-badge">Excel</span><span class="holo-badge">Pivot Tables</span><span class="holo-badge">Data Analysis</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/ujjwalkumar1294/LA-Crime-Insights-Dashboard" target="_blank" class="proj-btn proj-btn-source btn-holo btn-sith">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="proj-card holo-panel scan-line-container">
+          <div class="scan-line"></div>
+          <div class="proj-n">02</div>
+          <span class="proj-badge">Power BI · Visualization</span>
+          <div class="proj-title">Public Library Dashboard</div>
+          <p class="proj-desc">Interactive dashboard delivering actionable library data insights with a clean, intuitive
+            UI design, dynamic filters, and multi-chart type visuals for decision-makers.</p>
+          <ul class="proj-feats">
+            <li>Dynamic slicer-based filtering system</li>
+            <li>Multi-chart type visual reports</li>
+            <li>Clean &amp; intuitive UI design</li>
+          </ul>
+          <div class="proj-stack"><span class="holo-badge">Excel</span><span class="holo-badge">Charts</span><span class="holo-badge">Data Viz</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/ujjwalkumar1294/Public-Libaries-Project" target="_blank" class="proj-btn proj-btn-source btn-holo btn-sith">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="proj-card holo-panel scan-line-container">
+          <div class="scan-line"></div>
+          <div class="proj-n">03</div>
+          <span class="proj-badge">C++ · OOP · DSA</span>
+          <div class="proj-title">Student Marks Management System</div>
+          <p class="proj-desc">Console-based C++ application with full CRUD operations, a ranking engine, and binary
+            search optimization for fast record lookups — built as part of the LPU Data Structures training.</p>
+          <ul class="proj-feats">
+            <li>Add, delete &amp; search student records</li>
+            <li>Sorting &amp; ranking engine</li>
+            <li>Binary search optimization</li>
+          </ul>
+          <div class="proj-stack"><span class="holo-badge">C++</span><span class="holo-badge">OOP</span><span class="holo-badge">DSA</span><span class="holo-badge">Data Structures</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/ujjwalkumar1294/Student-Marks-Management-System" target="_blank" class="proj-btn proj-btn-source btn-holo btn-sith">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              Source
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 — RailConnect -->
+        <div class="proj-card holo-panel scan-line-container">
+          <div class="scan-line"></div>
+          <div class="proj-n">04</div>
+          <span class="proj-badge">Django · Full Stack</span>
+          <div class="proj-title">RailConnect</div>
+          <p class="proj-desc">A full-featured train ticket booking system inspired by IRCTC. Supports user
+            registration, ticket booking, seat selection, and a powerful admin panel for managing trains, routes, and
+            schedules.</p>
+          <ul class="proj-feats">
+            <li>Admin Dashboard — manage trains &amp; routes</li>
+            <li>User Dashboard — book, cancel &amp; track tickets</li>
+            <li>MySQL backend with relational data models</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="holo-badge">Django</span><span class="holo-badge">Python</span><span class="holo-badge">MySQL</span><span class="holo-badge">HTML/CSS</span><span class="holo-badge">JavaScript</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/ujjwalkumar1294/Railconnect_website" target="_blank" class="proj-btn proj-btn-source btn-holo btn-sith">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+              Source
+            </a>
+            <a href="https://railconnectwebsite-production.up.railway.app" target="_blank" class="proj-btn proj-btn-demo btn-holo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING (formerly Experience) -->
+  <section id="training">
+    <div class="container">
+      <div>
+        <div class="s-label">Hands-on Learning</div>
+        <h2 class="s-title">Training</h2>
+        <div class="grad-line"></div>
+        <p class="s-desc" style="margin-bottom:48px">Applied coursework focused on building practical software
+          foundations.</p>
+      </div>
+      <div class="cert-section-grid" style="display: flex; justify-content: center;">
+        <div class="cert-card-v2" style="max-width: 500px; width: 100%;">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="training_cert.png" alt="Fundamentals of Data Structures Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer" style="color: var(--holo-blue); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 8px;">LPU · 2025</div>
+            <div class="cert-name-v2" style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px;">Fundamentals of Data Structures: Learn, Apply and Build Projects</div>
+            <div class="cert-meta-v2" style="color: #94A3B8; line-height: 1.6; font-size: 0.95rem; margin-bottom: 24px;">Designed and implemented a Student Marks Management System using C++ and OOP principles. Optimized data retrieval with efficient sorting algorithms and enhanced data integrity preventing memory leaks.</div>
+            <a href="https://files.lpu.in/umsweb/skilldevcourse/SkillDevelopmentCertificates/12309828_838_20_08_2025.pdf?_gl=1*7o6e2c*_gcl_au*Nzg2NjM0MDI5LjE3NjY3MTk4NzMuMTg4MzUzNDEyNi4xNzY2ODEwNDY1LjE3NjY4MTA2NDE." target="_blank" class="cert-view-btn" style="border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 10px 16px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              VERIFY CERTIFICATE
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div>
+        <div class="s-label">Credentials</div>
+        <h2 class="s-title">Certifications</h2>
+        <div class="grad-line"></div>
+      </div>
+      <div class="cert-section-grid">
+
+        <!-- Cert 1 — Generative AI -->
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="infosys_genai_cert.png" alt="Generative AI Applications Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Infosys · 2025</div>
+            <div class="cert-name-v2">Generative AI Applications</div>
+            <div class="cert-meta-v2">Practical applications of generative AI models, prompt engineering, and LLM
+              integration in real-world scenarios.</div>
+            <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_014157683688415232146/1-e71f2560-ba8f-4a4d-8d2e-b53f1f908733.pdf" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 2 — Cloud Computing -->
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="cloud_computing_cert.png" alt="Cloud Computing Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">NPTEL · 2025</div>
+            <div class="cert-name-v2">Cloud Computing</div>
+            <div class="cert-meta-v2">Comprehensive study of cloud infrastructure, service models (IaaS, PaaS, SaaS),
+              and deployment strategies for modern applications.</div>
+            <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs11/Course/NPTEL25CS11S153730301704255995.pdf" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+
+
+        <!-- Cert 4 — Computer Communications -->
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="coursera_cert.png" alt="Computer Communications Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Coursera · 2024</div>
+            <div class="cert-name-v2">Computer Communications</div>
+            <div class="cert-meta-v2">Fundamentals of network protocols, data transmission, and communication
+              architectures underlying modern internet systems.</div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/ASW9F7LZOH6I" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 5 — Responsive Web Design -->
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="fcc_cert.png" alt="Responsive Web Design Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">freeCodeCamp · 2023</div>
+            <div class="cert-name-v2">Responsive Web Design</div>
+            <div class="cert-meta-v2">HTML5, CSS3, Flexbox, Grid, and accessibility principles for building mobile-first
+              responsive web interfaces.</div>
+            <a href="https://freecodecamp.org/certification/fccde786a96-2838-493b-ba33-7e42d07e47bf/responsive-web-design" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALACTIC RECORDS -->
+  <section id="achievements">
+    <div class="container">
+      <div>
+        <div class="holo-label">Milestones</div>
+        <h2 class="holo-heading">Galactic Records</h2>
+        <div class="grad-line"></div>
+      </div>
+      <div class="cert-section-grid">
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="adobe_hackathon.png" alt="Adobe India Hackathon Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">2025</div>
+            <div class="cert-name-v2">Adobe India Hackathon</div>
+            <div class="cert-meta-v2">Participated in one of India's premier design &amp; technology hackathons, showcasing
+              problem-solving under pressure alongside top student talent from across the country.</div>
+            <a href="https://unstop.com/certificate-preview/4e90c179-93d9-42b4-9172-674bf23c660b" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              VERIFY CERTIFICATE
+            </a>
+          </div>
+        </div>
+        <div class="cert-card-v2">
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="deloitte_simulation.png" alt="Deloitte Analytics Simulation Certificate" loading="lazy">
+            <div class="cert-img-overlay">
+              <button class="cert-zoom-btn" aria-label="Zoom certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">2025</div>
+            <div class="cert-name-v2">Deloitte Analytics Simulation</div>
+            <div class="cert-meta-v2">Successfully completed the Deloitte Data Analytics virtual simulation, demonstrating
+              professional-grade analytical capabilities and business insight delivery.</div>
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_oBp36oCemmmJjGmzP_1750861252877_completion_certificate.pdf" target="_blank" class="cert-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15,3 21,3 21,9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              VERIFY CERTIFICATE
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="s-label">Get in Touch</div>
+        <h2 class="s-title">Let's Build Something<br><span class="grad-text">Impactful Together</span></h2>
+        <p class="s-desc" style="margin:0 auto 44px">Open to internships, collaborations, and full-time opportunities.
+          I'd love to connect and explore what we can build.</p>
+        <div class="contact-links">
+          <a href="mailto:ujjwalkumar1294@gmail.com" class="cl">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Email Me
+          </a>
+          <a href="https://linkedin.com/in/ujjwal-kumar-28" target="_blank" class="cl">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/ujjwalkumar1294" target="_blank" class="cl">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div class="btn-magnetic">
+          <a href="mailto:ujjwalkumar1294@gmail.com" class="btn-grad" style="font-size:16px;padding:18px 44px">Send a
+            Message ✉️</a>
+        </div>
+
+        <!-- Popper.js Contact FAB Menu -->
+        <div class="contact-fab-wrap">
+          <div class="contact-fab-menu" id="contact-fab-menu">
+            <a href="https://github.com/ujjwalkumar1294" target="_blank" class="contact-fab-item fab-github" data-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/ujjwal-kumar-28" target="_blank" class="contact-fab-item fab-linkedin" data-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:ujjwalkumar1294@gmail.com" class="contact-fab-item fab-email" data-label="Send Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+          <button class="contact-fab-btn" aria-label="Quick contact actions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/ujjwalkumar1294" target="_blank" class="footer-link">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+        </svg>
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/ujjwal-kumar-28" target="_blank" class="footer-link">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        LinkedIn
+      </a>
+      <a href="mailto:ujjwalkumar1294@gmail.com" class="footer-link">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Email
+      </a>
+    </div>
+    <p>Built with passion &amp; data-driven thinking &nbsp;·&nbsp; <em>Ujjwal Kumar</em> &nbsp;·&nbsp; 2025</p>
+  </footer>
+
+  <!-- BACK TO TOP (Popper.js tooltip) -->
+  <div class="back-to-top-wrap">
+    <button class="back-to-top-btn" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <div class="btt-tooltip">Back to Top</div>
+  </div>
+
+  <!-- LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+  <!-- PORTFOLIO SCRIPTS -->
+  <script src="starwars-animations.js"></script>
+  <script src="portfolio.js"></script>
+  <script src="popper-widgets.js"></script>
+</body>
+
+</html>
+
